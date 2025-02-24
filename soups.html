@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Sections */
+section {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    color: #ff6f61;
+}
+
+/* Menu Styles */
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+    width: 250px;
+}
+
+.menu-item:hover {
+    transform: scale(1.05);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e85a4f;
+}
+
+/* Cart Section */
+#cart {
+    background-color: #fff3e0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Footer */
+footer {
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Venky's Resturant</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+                <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Food Delivery</h2>
+        <p>Order your favorite food online!</p>
+    </section>
+
+    <section id="menu">
+        <h2>Soups</h2>
+        <div class="menu-items">
+            <div class="menu-item" data-id="1" data-name="Hot-and-sour-soup" data-price="100">
+                <img src="Hot-and-sour-soup.jpg">
+                <h3>Hot-and-sour-soup</h3>
+                <p>100rs</p>
+                <button onclick="addToCart(1)">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-id="2" data-name="minestrone-soup" data-price="120">
+                <img src="minestrone-soup.jpg">
+                <h3>Minestrone-soup</h3>
+                <p>120rs</p>
+                <button onclick="addToCart(2)">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-id="3" data-name="Roasted-Tomato-Soup" data-price="90">
+                <img src="Roasted-Tomato-Soup.jpg">
+                <h3>Roasted-Tomato-Soup</h3>
+                <p>90rs</p>
+                <button onclick="addToCart(3)">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-id="4" data-name="Vegetable-Beef-Soup" data-price="80">
+                <img src="Vegetable-Beef-Soup.jpg">
+                <h3>Vegetable-Beef-Soup</h3>
+                <p>80rs</p>
+                <button onclick="addToCart(4)">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-id="5" data-name="Vegetarian Red Bean Chili" data-price="120">
+                <img src="Vegetarian Red Bean Chili.jpg">
+                <h3>Vegetarian Red Bean Chili</h3>
+                <p>120rs</p>
+                <button onclick="addToCart(5)">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-id="6" data-name="Chicken-Tortilla-Soup" data-price="170">
+                <img src="Chicken-Tortilla-Soup.jpg">
+                <h3>Chicken-Tortilla-Soup</h3>
+                <p>170rs</p>
+                <button onclick="addToCart(6)">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-id="7" data-name="Chicken-Noodle-Soup" data-price="180">
+                <img src="Chicken-Noodle-Soup.jpg">
+                <h3>Chicken-Noodle-Soup</h3>
+                <p>180rs</p>
+                <button onclick="addToCart(7)">Add to Cart</button>
+            </div>
+            <div class="menu-item" data-id="8" data-name="Natukodi" data-price="200">
+                <img src="Natukodi.jpg">
+                <h3>Natukodi Soup</h3>
+                <p>200rs</p>
+                <button onclick="addToCart(8)">Add to Cart</button>
+            </div>
+        </div>
+         </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Food Delivery</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        let cart = [];
+let total = 0;
+
+function addToCart(itemId) {
+    const item = document.querySelector(`.menu-item[data-id="${itemId}"]`);
+    const itemName = item.getAttribute('data-name');
+    const itemPrice = parseFloat(item.getAttribute('data-price'));
+
+    const existingItem = cart.find(i => i.id === itemId);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ id: itemId, name: itemName, price: itemPrice, quantity: 1 });
+    }
+
+    total += itemPrice;
+
+    updateCartUI();
+}
+
+function updateCartUI() {
+    const cartItems = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const cartTotal = document.getElementById('cart-total');
+
+    cartItems.innerHTML = '';
+
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} x ${item.quantity} - $${(item.price * item.quantity).toFixed(2)}`;
+        cartItems.appendChild(li);
+    });
+
+    cartCount.textContent = cart.length;
+    cartTotal.textContent = total.toFixed(2);
+}
+
+function checkout() {
+    if (cart.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+    alert(`Order placed! Total: $${total.toFixed(2)}`);
+    cart = [];
+    total = 0;
+    updateCartUI();
+}
+    </script>
+</body>
+</html> 

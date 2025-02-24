@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Venky's Resturant</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+            <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Food Delivery</h2>
+        <p>Order your favorite food online!</p>
+    </section>
+
+    <section id="menu">
+        <div class="row">
+            <div class="column">
+                <a href="soups.html"> <img src="soups.jpg" alt="">
+                <h4>Soups</h4>
+                </a>
+            </div>
+            <div class="column">
+                <a href="veg starter.html"> <img src="veg starter.jpg" alt="">
+                <h4>Veg Starters</h4>
+                </a>
+            </div>
+            <div class="column">
+                <a href="Non_veg_Starter.html"> <img src="non veg starter.jpg" alt="">
+                <h4>Non Veg Starters</h4>
+                </a>
+            </div>
+            <div class="column">
+                <a href="veg biryani.html"> <img src="veg biryani.jpg" alt="">
+                <h4>Veg Biryani's</h4>
+                </a>
+            </div>
+            <div class="column">
+                <a href=""> <img src="non veg biryani.jpg" alt="">
+                <h4>Non Veg Biryani's</h4>
+                </a>
+            </div>
+            <div class="column">
+                <a href="Cold_Drinks.html"> <img src="cold drinks.jpg" alt="">
+                <h4>Cold Drinks</h4>
+                </a>
+            </div>
+
+    </section>
+
+    <section id="reservation">
+        <h2>Table Reservation</h2>
+        <form id="reservation-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+    
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+    
+            <label for="guests">Number of Guests:</label>
+            <select id="guests" name="guests">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+</option>
+            </select>
+    
+            <button type="submit">Reserve Table</button>
+        </form>
+    </section>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>We’d love to hear from you! Fill out the form below to reach us.</p>
+
+        <form id="contact-form">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <h3>Ongole</h3>
+            <p>📍Mangamoor Road Gandhi Nagar</p>
+            <p>📞 9989588826</p>
+            <p>✉️ inamanamellurivenkatesh@gmail.com</p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2025 Food Delivery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
