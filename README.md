@@ -1,4 +1,5 @@
 Food Delivery Restaurant Website
+
 Welcome to the Food Delivery Restaurant project! This is a simple, responsive website built using HTML, CSS, and JavaScript. The website allows users to browse the restaurant's menu, place orders, and get food delivered to their doorstep.
 
 Features
@@ -60,4 +61,5 @@ For any questions or feedback, feel free to reach out:
 Email:inamanamellurivenkatesh@gmail.com
 
 GitHub: https://github.com/venkyvenkatesh5
+
 Created by:Venkatesh Inamanamelluru
